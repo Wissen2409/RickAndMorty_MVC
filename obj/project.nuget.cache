@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jh17CFWOv6c=",
+  "success": true,
+  "projectFilePath": "/Users/emrahelis/RickAndMorty_MVC/RickAndMorty_MVC.csproj",
+  "expectedPackageFiles": [
+    "/Users/emrahelis/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/emrahelis/.nuget/packages/restsharp/112.1.0/restsharp.112.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
