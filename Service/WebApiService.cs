@@ -13,29 +13,29 @@ public class WebApiService : IWebApiService
         _helpers = helpers;
 
     }
-    public RickAndMortyDTO GetAll()
+    public DTO.RickAndMorty GetAll()
     {
 
-        RickAndMortyDMO returnModel = _webApiRepository.GetAll();
+       DMO.RickAndMorty returnModel = _webApiRepository.GetAll();
+       DTO.RickAndMorty model=new RickAndMorty();
         // DMO denen tip'in asla action'a gitmemesi lazım!! Bunun için DTO denen, data transfer object kullanılabilir
 
         // RickAndMortyDmo tipini,RickAndMortyDTO'ya çevirmek için, AutoMapper kullanılabilir!!
         // 1 : DMO^yu DTO'ya elle mapleyelim!!
         try
         {
-
-            var returnDTO = _helpers.Map<RickAndMortyDMO, RickAndMortyDTO>(returnModel, new RickAndMortyDTO());
-
+             model = _helpers.Map(returnModel);   
         }
         catch (Exception ex)
         {
 
         }
+        return model;
 
 
 
         #region DMO-DTO Mapping
-        var newReturnModel = new RickAndMortyDTO()
+        /*var newReturnModel = new RickAndMortyDTO()
         {
             Info = new InfoDTO()
             {
@@ -61,14 +61,14 @@ public class WebApiService : IWebApiService
                 Name = s.Location.Name
             }
         }).ToList();
-        #endregion
+        
 
-        return newReturnModel;
+        return newReturnModel;*/
+        #endregion
     }
 
 }
 public interface IWebApiService
 {
-
-    public RickAndMortyDTO GetAll();
+    public DTO.RickAndMorty GetAll();
 }

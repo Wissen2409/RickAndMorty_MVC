@@ -29,13 +29,13 @@
 
 namespace DTO
 {
-    public class RickAndMortyDTO
+    public class RickAndMorty
     {
 
-        public InfoDTO Info { get; set; }
-        public List<DetailDTO> Results { get; set; }
+        public Info Info { get; set; }
+        public List<Detail> Results { get; set; }
     }
-    public class InfoDTO
+    public class Info
     {
         public int Count { get; set; }
         public int Pages { get; set; }
@@ -43,7 +43,7 @@ namespace DTO
         public int? Prev { get; set; }
 
     }
-    public class DetailDTO
+    public class Detail
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -52,9 +52,9 @@ namespace DTO
         public string Type { get; set; }
         public string Gender { get; set; }
         public string Image { get; set; }
-        public LocationDTO Location { get; set; }
+        public Location Location { get; set; }
     }
-    public class LocationDTO
+    public class Location
     {
 
         public string Name { get; set; }

@@ -5,14 +5,17 @@ using AutoMapper;
 public class Helpers
 {
 
-    public TDestination Map<TSource, TDestination>(TSource source, TDestination destination)
+    public DTO.RickAndMorty Map(DMO.RickAndMorty source)
     {
-
         var config = new MapperConfiguration(s =>
-                       s.CreateMap<TSource, TDestination>());
-
+        {
+            s.CreateMap<DMO.Info, DTO.Info>();
+            s.CreateMap<DMO.Detail, DTO.Detail>();
+            s.CreateMap<DMO.Location, DTO.Location>();
+            s.CreateMap<DMO.RickAndMorty, DTO.RickAndMorty>();
+        });
         Mapper mapper = new Mapper(config);
-        return mapper.Map<TSource, TDestination>(source, destination);
+        return mapper.Map<DMO.RickAndMorty,DTO.RickAndMorty>(source);
     }
 
 }

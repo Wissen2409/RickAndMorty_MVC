@@ -15,7 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        RickAndMortyDTO result = _webApiService.GetAll();
+        DTO.RickAndMorty result = _webApiService.GetAll();
         
         #region DTO-View Model Mapping
         var newReturnModel = new RickAndMortyViewModel()
