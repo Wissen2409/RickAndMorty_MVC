@@ -32,3 +32,5 @@
 /Users/emrahelis/RickAndMorty_MVC/obj/Debug/net8.0/RickAndMorty_MVC.genruntimeconfig.cache
 /Users/emrahelis/RickAndMorty_MVC/obj/Debug/net8.0/ref/RickAndMorty_MVC.dll
 /Users/emrahelis/RickAndMorty_MVC/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/emrahelis/RickAndMorty_MVC/bin/Debug/net8.0/AutoMapper.dll
+/Users/emrahelis/RickAndMorty_MVC/obj/Debug/net8.0/RickAndMorty_MVC.sourcelink.json

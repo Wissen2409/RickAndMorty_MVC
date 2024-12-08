@@ -9,12 +9,12 @@
 // bu veri, bir veri tabanına bağlandıktan sonra çekilen veri olabilir
 // bu veri dosya sistemindeki bir dosyadan okuma işlemi yada yazma işlemi olabilir
 // bir cihaza bağlantı, cihazdan veri alma verme olabilr
-
+using Newtonsoft.Json;
 using RestSharp;
 
 public class WebApiRepository:IWebApiRepository
 {
-    public string GetAll()
+    public RickAndMortyDMO GetAll()
     {
         // Rick and morty sitesine RestSharp kullanarak istek atalım!!
 
@@ -27,11 +27,12 @@ public class WebApiRepository:IWebApiRepository
         // The cancellation token comes from the caller. You can still make a call without it.
         var timeline =  client.Get(request);
 
-        return timeline.Content;
+        RickAndMortyDMO resultData = JsonConvert.DeserializeObject<RickAndMortyDMO>(timeline.Content);
+        return resultData;
     }
 }
 public interface IWebApiRepository
 {
 
-    public string GetAll();
+    public RickAndMortyDMO GetAll();
 }

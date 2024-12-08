@@ -5,6 +5,7 @@ builder.Services.AddControllersWithViews();
 // bağımlılıkları ekleyelim!!
 builder.Services.AddScoped<IWebApiRepository,WebApiRepository>();
 builder.Services.AddScoped<IWebApiService,WebApiService>();
+builder.Services.AddScoped<Helpers>();
 
 
 var app = builder.Build();
