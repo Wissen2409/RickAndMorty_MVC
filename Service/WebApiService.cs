@@ -8,10 +8,8 @@ public class WebApiService : IWebApiService
     public Helpers _helpers;
     public WebApiService(IWebApiRepository repository, Helpers helpers)
     {
-
         _webApiRepository = repository;
         _helpers = helpers;
-
     }
     public DTO.RickAndMorty GetAll()
     {
